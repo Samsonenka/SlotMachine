@@ -1,8 +1,11 @@
 package com.samsonenka.SlotMachine.controllers;
 
+import com.samsonenka.SlotMachine.models.Fruit;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 @Controller
 public class MainController {
@@ -16,7 +19,11 @@ public class MainController {
     @GetMapping("/startGame")
     public String startGame(ModelMap modelMap){
 
-        System.out.println("Start Game!");
+        Fruit fruit = new Fruit();
+        List<Fruit> fruitList = fruit.createRandomFruits(fruit.getFruitList(), fruit.getRandomNumbers());
+
+        modelMap.put("fruitList", fruitList);
+
         return "index";
     }
 }

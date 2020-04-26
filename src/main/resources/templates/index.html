@@ -7,50 +7,53 @@
 </head>
 <body>
     <div id="content">
-        <table>
-            <tr>
-                <th>
-                    <div class="card">
-                        <div class="image">
-                            <img src="/img/plum.png" alt="fruit">
+
+            <div class="table">
+                <tr>
+                    <th>
+                        <div class="card" th:each ="fruit : ${fruitList}">
+                            <div class="image">
+                                <img th:src="@{'/img/' + ${fruit.name} + '.png'}" alt="fruit">
+                            </div>
+                            <div class="point">
+                                <h1>+2</h1>
+                            </div>
                         </div>
-                        <div class="point">
-                            <h1>+2</h1>
-                        </div>
-                    </div>
-                </th>
-                <th>
-                    <div class="card">
-                        <div class="image">
-                            <img src="/img/pear.png" alt="fruit">
-                        </div>
-                        <div class="point">
-                            <h1>+2</h1>
-                        </div>
-                    </div>
-                </th>
-                <th>
-                    <div class="card">
-                        <div class="image">
-                            <img src="/img/lemon.png" alt="fruit">
-                        </div>
-                        <div class="point">
-                            <h1>+2</h1>
-                        </div>
-                    </div>
-                </th>
-                <th>
-                    <div class="card">
-                        <div class="image">
-                            <img src="/img/grape.png" alt="fruit">
-                        </div>
-                        <div class="point">
-                            <h1>+2</h1>
-                        </div>
-                    </div>
-                </th>
-            </tr>
-        </table>
+                    </th>
+                </tr>
+            </div>
+
+
+<!--                <th>-->
+<!--                    <div class="card">-->
+<!--                        <div class="image">-->
+<!--                            <img src="/img/pear.png" alt="fruit">-->
+<!--                        </div>-->
+<!--                        <div class="point">-->
+<!--                            <h1>+2</h1>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </th>-->
+<!--                <th>-->
+<!--                    <div class="card">-->
+<!--                        <div class="image">-->
+<!--                            <img src="/img/lemon.png" alt="fruit">-->
+<!--                        </div>-->
+<!--                        <div class="point">-->
+<!--                            <h1>+2</h1>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </th>-->
+<!--                <th>-->
+<!--                    <div class="card">-->
+<!--                        <div class="image">-->
+<!--                            <img src="/img/grape.png" alt="fruit">-->
+<!--                        </div>-->
+<!--                        <div class="point">-->
+<!--                            <h1>+2</h1>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </th>-->
         <div class="button">
             <form class="button" th:action="@{/startGame}" method="get">
                 <input type="submit" value="START"/>

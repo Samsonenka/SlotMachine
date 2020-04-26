@@ -21,8 +21,9 @@
     text-align: center;
 }
 
-table{
-margin: auto;
+.table{
+    margin: auto;
+    width: 100px;
 }
 
 img{
