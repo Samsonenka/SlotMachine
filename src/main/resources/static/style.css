@@ -1,0 +1,42 @@
+.card{
+    background-color: burlywood;
+    width: 100px;
+    height: 150px;
+    margin: auto;
+    margin-right: 5px;
+    padding-top: 13px;
+    padding-bottom: 10px;
+    box-shadow: 4px 4px 5px #888888;
+}
+
+.image{
+    background-color: rgb(253, 253, 253);
+    width: 70px;
+    height: 90px;
+    margin: auto;
+}
+
+.point{
+    margin-top: 20px;
+    text-align: center;
+}
+
+table{
+margin: auto;
+}
+
+img{
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+#content{
+    margin: auto;
+}
+
+.button{
+    width: 65px;
+    margin: auto;
+    margin-top: 15px;
+}

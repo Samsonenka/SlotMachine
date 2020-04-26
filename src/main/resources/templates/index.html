@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Title</title>
+</head>
+<body>
+    <div id="content">
+        <table>
+            <tr>
+                <th>
+                    <div class="card">
+                        <div class="image">
+                            <img src="/img/plum.png" alt="fruit">
+                        </div>
+                        <div class="point">
+                            <h1>+2</h1>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="card">
+                        <div class="image">
+                            <img src="/img/pear.png" alt="fruit">
+                        </div>
+                        <div class="point">
+                            <h1>+2</h1>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="card">
+                        <div class="image">
+                            <img src="/img/lemon.png" alt="fruit">
+                        </div>
+                        <div class="point">
+                            <h1>+2</h1>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="card">
+                        <div class="image">
+                            <img src="/img/grape.png" alt="fruit">
+                        </div>
+                        <div class="point">
+                            <h1>+2</h1>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </table>
+        <div class="button">
+            <form class="button" th:action="@{/startGame}" method="get">
+                <input type="submit" value="START"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
