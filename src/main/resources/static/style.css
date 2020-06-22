@@ -1,8 +1,14 @@
+.container{
+    width: 425px;
+    height: 190px;
+    margin: auto;
+}
+
 .card{
     background-color: burlywood;
     width: 100px;
     height: 150px;
-    margin: auto;
+    float: left;
     margin-right: 5px;
     padding-top: 13px;
     padding-bottom: 10px;
@@ -22,8 +28,10 @@
 }
 
 .table{
-    margin: auto;
-    width: 100px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
 }
 
 img{
