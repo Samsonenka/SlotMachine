@@ -22,6 +22,9 @@ public class MainController {
         Fruit fruit = new Fruit();
         List<Fruit> fruitList = fruit.createRandomFruits(fruit.getFruitList(), fruit.getRandomNumbers());
 
+        System.out.println(fruit.sumPoints(fruitList));
+
+
         modelMap.put("fruitList", fruitList);
 
         return "index";

@@ -13,7 +13,7 @@
                 <img th:src="@{'/img/' + ${fruit.name} + '.png'}" alt="fruit">
             </div>
             <div class="point">
-                <h1>+2</h1>
+                <h1 th:text="${fruit.point}"></h1>
             </div>
         </div>
     </div>
