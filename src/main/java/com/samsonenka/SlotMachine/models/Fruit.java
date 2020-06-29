@@ -23,9 +23,9 @@ public class Fruit {
     public List<Fruit> getFruitList() {
 
         fruitList.add(new Fruit(1, "grape", 2)); //виноград
-        fruitList.add(new Fruit(2, "lemon", 3)); //лимон
-        fruitList.add(new Fruit(3, "pear", 4)); //груша
-        fruitList.add(new Fruit(4, "plum", 5)); //слива
+        fruitList.add(new Fruit(2, "lemon", 5)); //лимон
+        fruitList.add(new Fruit(3, "pear", 2)); //груша
+        fruitList.add(new Fruit(4, "plum", 2)); //слива
 
         return fruitList;
     }
@@ -82,7 +82,7 @@ public class Fruit {
         return maxBonus;
     }
 
-    public int sumPoints(List<Fruit> fruitList){
+    public int sumPoints(List<Fruit> fruitList, Player player){
 
         int sumPoints = 0;
         int maxBonus = bonusPoints(fruitList);
@@ -91,7 +91,18 @@ public class Fruit {
             sumPoints += fruit.getPoint();
         }
 
-        return sumPoints * maxBonus;
+        switch (maxBonus){
+            case 4: sumPoints *= 2;
+            break;
+            case 3: sumPoints += 5;
+            break;
+            case 2: sumPoints += 0;
+            break;
+            case 1: sumPoints -= sumPoints - 20;
+            break;
+        }
+
+        return sumPoints;
     }
 
     public int getPoint() {
